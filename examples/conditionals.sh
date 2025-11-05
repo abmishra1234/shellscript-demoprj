@@ -26,7 +26,10 @@ fi
 
 # User input with validation
 read -p "Enter a number (1-10): " INPUT
-if [ "$INPUT" -ge 1 ] && [ "$INPUT" -le 10 ]; then
+# Check if input is numeric
+if ! [[ "$INPUT" =~ ^[0-9]+$ ]]; then
+    echo "Invalid input. Please enter a valid number."
+elif [ "$INPUT" -ge 1 ] && [ "$INPUT" -le 10 ]; then
     echo "Valid input: $INPUT"
 else
     echo "Invalid input. Please enter a number between 1 and 10."

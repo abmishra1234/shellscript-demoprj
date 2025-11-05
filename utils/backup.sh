@@ -26,7 +26,7 @@ fi
 echo "Backing up: $SOURCE_DIR"
 echo "Backup location: $BACKUP_DIR/$BACKUP_NAME"
 
-tar -czf "$BACKUP_DIR/$BACKUP_NAME" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_DIR")" 2>/dev/null
+tar -czf "$BACKUP_DIR/$BACKUP_NAME" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_DIR")"
 
 if [ $? -eq 0 ]; then
     echo "Backup completed successfully!"
