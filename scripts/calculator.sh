@@ -23,7 +23,7 @@ multiply() {
 
 # Function to divide
 divide() {
-    if [ "$2" == "0" ]; then
+    if [ "$2" = "0" ]; then
         echo "Error: Division by zero"
         return 1
     fi
@@ -38,7 +38,7 @@ if ! command -v bc &> /dev/null; then
     subtract() { echo $(($1 - $2)); }
     multiply() { echo $(($1 * $2)); }
     divide() {
-        if [ "$2" == "0" ]; then
+        if [ "$2" = "0" ]; then
             echo "Error: Division by zero"
             return 1
         fi
@@ -62,7 +62,7 @@ echo ""
 
 # Interactive mode
 read -p "Do you want to perform a calculation? (y/n): " answer
-if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
+if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     read -p "Enter first number: " n1
     read -p "Enter second number: " n2
     
