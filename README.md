@@ -7,6 +7,7 @@ A collection of educational shell scripts demonstrating common shell scripting c
 ```
 shellscript-demoprj/
 ├── README.md
+├── run_demos.sh           # Interactive launcher for all demo scripts
 └── scripts/
     ├── hello_world.sh      # Basic shell script introduction
     ├── system_info.sh      # System information display
@@ -25,6 +26,21 @@ shellscript-demoprj/
 - Optional: `bc` for calculator script (will fallback to basic arithmetic if not available)
 
 ### Running the Scripts
+
+#### Quick Start with Launcher
+
+The easiest way to explore all demos is to use the interactive launcher:
+
+```bash
+./run_demos.sh
+```
+
+This will present a menu where you can:
+- Run individual demo scripts
+- Run all non-interactive demos at once
+- Exit the launcher
+
+#### Running Individual Scripts
 
 All scripts are executable. You can run them from the scripts directory:
 
