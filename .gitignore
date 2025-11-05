@@ -1,0 +1,30 @@
+# Backup and state files
+*.bak.sh
+*.state
+
+# Credentials (never commit)
+cleanup-images.conf.prod
+.aws/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Python cache artifacts
+__pycache__/
+*.pyc
+
+# Virtual environments
+.env
+venv/
+.env/
+
+# Editor settings
+.vscode/
+.idea/
