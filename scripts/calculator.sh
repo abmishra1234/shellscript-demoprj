@@ -66,12 +66,12 @@ if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     read -p "Enter first number: " n1
     read -p "Enter second number: " n2
     
-    # Validate numeric input
-    if ! [[ "$n1" =~ ^-?[0-9]+\.?[0-9]*$ ]]; then
+    # Validate numeric input (supports integers and decimals, including .5 format)
+    if ! [[ "$n1" =~ ^-?([0-9]+\.?[0-9]*|\.[0-9]+)$ ]]; then
         echo "Error: First input is not a valid number"
         exit 1
     fi
-    if ! [[ "$n2" =~ ^-?[0-9]+\.?[0-9]*$ ]]; then
+    if ! [[ "$n2" =~ ^-?([0-9]+\.?[0-9]*|\.[0-9]+)$ ]]; then
         echo "Error: Second input is not a valid number"
         exit 1
     fi
