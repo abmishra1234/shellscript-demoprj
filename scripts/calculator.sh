@@ -65,6 +65,17 @@ read -p "Do you want to perform a calculation? (y/n): " answer
 if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
     read -p "Enter first number: " n1
     read -p "Enter second number: " n2
+    
+    # Validate numeric input
+    if ! [[ "$n1" =~ ^-?[0-9]+\.?[0-9]*$ ]]; then
+        echo "Error: First input is not a valid number"
+        exit 1
+    fi
+    if ! [[ "$n2" =~ ^-?[0-9]+\.?[0-9]*$ ]]; then
+        echo "Error: Second input is not a valid number"
+        exit 1
+    fi
+    
     read -p "Enter operation (+, -, *, /): " op
     
     case $op in

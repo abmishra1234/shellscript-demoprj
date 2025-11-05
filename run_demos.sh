@@ -26,8 +26,8 @@ echo -e "${GREEN}6.${NC} Interactive Menu   - Menu-driven interface demo"
 echo -e "${GREEN}7.${NC} Run All (non-interactive) - Run all non-interactive scripts"
 echo -e "${GREEN}0.${NC} Exit"
 echo ""
-echo -e "${YELLOW}======================================"
-read -p "Enter your choice [0-7]: ${NC}" choice
+echo -e "${YELLOW}======================================${NC}"
+read -p "Enter your choice [0-7]: " choice
 echo ""
 
 case $choice in
